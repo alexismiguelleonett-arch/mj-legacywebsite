@@ -353,13 +353,13 @@ const albums: Album[] = [
     ],
     editions: [],
   },
+  {
     title: 'Michael',
     cover: '/images/michael.jpg',
     year: '2010',
     category: 'studio',
     label: 'Epic / MJJ Productions · Primer álbum póstumo',
     themeColor: '#193070', 
-
     tracklist: [
       'Hold My Hand (con Akon)',
       'Hollywood Tonight',
@@ -387,7 +387,6 @@ const albums: Album[] = [
     category: 'studio',
     label: 'Epic / MJJ Productions · Segundo álbum póstumo',
     themeColor: '#191970', // Color azul medianoche
-
     tracklist: [
       'Love Never Felt So Good',
       'Chicago',
