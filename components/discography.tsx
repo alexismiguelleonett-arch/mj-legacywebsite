@@ -305,9 +305,9 @@ const albums: Album[] = [
   },
   {
     title: 'Blood on the Dance Floor',
-    cover: '/albums/blood-on-the-dance-floor.svg',
+    cover: '/Blood of the Dance Floor.png',
     year: '1997',
-    category: 'singles',
+    category: 'studio',
     label: 'Epic · HIStory in the Mix',
     tracklist: [
       'Blood on the Dance Floor',
@@ -329,6 +329,56 @@ const albums: Album[] = [
         name: 'Formato',
         type: 'Special Edition',
         tracks: ['5 canciones nuevas + 8 remixes de HIStory', 'Primer álbum de remixes #1 en UK'],
+      },
+    ],
+  },
+  {
+    title: 'Michael',
+    cover: '/images/michael.jpg',
+    year: '2010',
+    category: 'studio',
+    label: 'Epic / MJJ Productions · Primer álbum póstumo',
+    tracklist: [
+      'Hold My Hand (con Akon)',
+      'Hollywood Tonight',
+      'Keep Your Head Up',
+      '(I Like) The Way You Love Me',
+      'Monster (con 50 Cent)',
+      'Best of Joy',
+      'Breaking News',
+      '(I Can\u2019t Make It) Another Day (con Lenny Kravitz)',
+      'Behind the Mask',
+      'Much Too Soon',
+    ],
+    editions: [
+      {
+        name: 'Deluxe Edition',
+        type: 'Bonus',
+        tracks: ['DVD con documental del making-of', 'Caja de lujo con libro de fotos'],
+      },
+    ],
+  },
+  {
+    title: 'Xscape',
+    cover: '/images/xscape.jpg',
+    year: '2014',
+    category: 'studio',
+    label: 'Epic / MJJ Productions · Segundo álbum póstumo',
+    tracklist: [
+      'Love Never Felt So Good',
+      'Chicago',
+      'Loving You',
+      'A Place with No Name',
+      'Slave to the Rhythm',
+      'Do You Know Where Your Children Are',
+      'Blue Gangsta',
+      'Xscape',
+    ],
+    editions: [
+      {
+        name: 'Deluxe Edition',
+        type: 'Bonus',
+        tracks: ['Versiones originales (demo) de cada tema', 'Documental de la producción'],
       },
     ],
   },
@@ -499,8 +549,8 @@ export function Discography() {
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
             Explora la obra completa del Rey del Pop: desde sus inicios en Motown
-            hasta Invincible. Filtra por categoría y abre cada portada para ver el
-            tracklist y sus ediciones especiales.
+            hasta sus lanzamientos póstumos. Filtra por categoría y abre cada portada
+            para ver el tracklist y sus ediciones especiales.
           </p>
         </div>
 
