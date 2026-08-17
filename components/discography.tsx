@@ -24,7 +24,7 @@ type Album = {
 const albums: Album[] = [
   {
     title: 'Got to Be There',
-    cover: '/albums/got-to-be-there.svg',
+    cover: '/Gottobethere.jpg',
     year: '1972',
     category: 'studio',
     label: 'Motown · Debut en solitario',
@@ -50,7 +50,7 @@ const albums: Album[] = [
   },
   {
     title: 'Ben',
-    cover: '/albums/ben.svg',
+    cover: '/BEN.png',
     year: '1972',
     category: 'studio',
     label: 'Motown',
@@ -76,7 +76,7 @@ const albums: Album[] = [
   },
   {
     title: 'Music & Me',
-    cover: '/albums/music-and-me.svg',
+    cover: '/Music and Me.png',
     year: '1973',
     category: 'studio',
     label: 'Motown',
@@ -96,7 +96,7 @@ const albums: Album[] = [
   },
   {
     title: 'Forever, Michael',
-    cover: '/albums/forever-michael.svg',
+    cover: '/ForeverMichael.png',
     year: '1975',
     category: 'studio',
     label: 'Motown',
@@ -116,7 +116,7 @@ const albums: Album[] = [
   },
   {
     title: 'Off the Wall',
-    cover: '/albums/off-the-wall.svg',
+    cover: '/offthewall.jpg',
     year: '1979',
     category: 'studio',
     label: 'Epic · Prod. Quincy Jones',
@@ -145,7 +145,7 @@ const albums: Album[] = [
   },
   {
     title: 'Thriller',
-    cover: '/albums/thriller.svg',
+    cover: '/Thriller.jpg',
     year: '1982',
     category: 'studio',
     label: 'Epic · Álbum más vendido de la historia',
@@ -182,7 +182,7 @@ const albums: Album[] = [
   },
   {
     title: 'Bad',
-    cover: '/albums/bad.svg',
+    cover: '/BAD.jpg',
     year: '1987',
     category: 'studio',
     label: 'Epic · Cinco #1 en Billboard',
@@ -218,7 +218,7 @@ const albums: Album[] = [
   },
   {
     title: 'Dangerous',
-    cover: '/albums/dangerous.svg',
+    cover: '/dangerous.jpg',
     year: '1991',
     category: 'studio',
     label: 'Epic · Prod. Teddy Riley',
@@ -242,7 +242,7 @@ const albums: Album[] = [
   },
   {
     title: 'HIStory',
-    cover: '/albums/history.svg',
+    cover: '/History.jpg',
     year: '1995',
     category: 'studio',
     label: 'Epic · Book I (disco de material nuevo)',
@@ -279,7 +279,7 @@ const albums: Album[] = [
   },
   {
     title: 'Invincible',
-    cover: '/albums/invincible.svg',
+    cover: '/invincible.jpg',
     year: '2001',
     category: 'studio',
     label: 'Epic · Último álbum de estudio',
