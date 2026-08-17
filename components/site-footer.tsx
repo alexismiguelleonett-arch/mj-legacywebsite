@@ -1,4 +1,4 @@
-import { Crown } from 'lucide-react'
+import { Music } from 'lucide-react'
 
 const columns = [
   {
@@ -38,10 +38,10 @@ export function SiteFooter() {
           <div>
             <a href="#top" className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-                <Crown className="h-5 w-5 text-primary-foreground" />
+                <Music className="h-5 w-5 text-primary-foreground" />
               </span>
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground">
-                MJ Archivo
+                Legacy
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -73,7 +73,7 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} MJ Archivo. Sitio tributo de fans. No
+            © {new Date().getFullYear()} Legacy. Sitio tributo de fans. No
             oficial.
           </p>
           <p className="text-xs uppercase tracking-wider text-muted-foreground">

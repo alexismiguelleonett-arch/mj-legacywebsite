@@ -13,6 +13,7 @@ type Edition = {
 
 type Album = {
   title: string
+  cover: string
   year: string
   category: Category
   label: string
@@ -23,6 +24,7 @@ type Album = {
 const albums: Album[] = [
   {
     title: 'Got to Be There',
+    cover: '/albums/got-to-be-there.svg',
     year: '1972',
     category: 'studio',
     label: 'Motown · Debut en solitario',
@@ -48,6 +50,7 @@ const albums: Album[] = [
   },
   {
     title: 'Ben',
+    cover: '/albums/ben.svg',
     year: '1972',
     category: 'studio',
     label: 'Motown',
@@ -73,6 +76,7 @@ const albums: Album[] = [
   },
   {
     title: 'Music & Me',
+    cover: '/albums/music-and-me.svg',
     year: '1973',
     category: 'studio',
     label: 'Motown',
@@ -92,6 +96,7 @@ const albums: Album[] = [
   },
   {
     title: 'Forever, Michael',
+    cover: '/albums/forever-michael.svg',
     year: '1975',
     category: 'studio',
     label: 'Motown',
@@ -111,6 +116,7 @@ const albums: Album[] = [
   },
   {
     title: 'Off the Wall',
+    cover: '/albums/off-the-wall.svg',
     year: '1979',
     category: 'studio',
     label: 'Epic · Prod. Quincy Jones',
@@ -139,6 +145,7 @@ const albums: Album[] = [
   },
   {
     title: 'Thriller',
+    cover: '/albums/thriller.svg',
     year: '1982',
     category: 'studio',
     label: 'Epic · Álbum más vendido de la historia',
@@ -175,6 +182,7 @@ const albums: Album[] = [
   },
   {
     title: 'Bad',
+    cover: '/albums/bad.svg',
     year: '1987',
     category: 'studio',
     label: 'Epic · Cinco #1 en Billboard',
@@ -210,6 +218,7 @@ const albums: Album[] = [
   },
   {
     title: 'Dangerous',
+    cover: '/albums/dangerous.svg',
     year: '1991',
     category: 'studio',
     label: 'Epic · Prod. Teddy Riley',
@@ -233,6 +242,7 @@ const albums: Album[] = [
   },
   {
     title: 'HIStory',
+    cover: '/albums/history.svg',
     year: '1995',
     category: 'studio',
     label: 'Epic · Book I (disco de material nuevo)',
@@ -269,6 +279,7 @@ const albums: Album[] = [
   },
   {
     title: 'Invincible',
+    cover: '/albums/invincible.svg',
     year: '2001',
     category: 'studio',
     label: 'Epic · Último álbum de estudio',
@@ -294,6 +305,7 @@ const albums: Album[] = [
   },
   {
     title: 'Blood on the Dance Floor',
+    cover: '/albums/blood-on-the-dance-floor.svg',
     year: '1997',
     category: 'singles',
     label: 'Epic · HIStory in the Mix',
@@ -322,6 +334,7 @@ const albums: Album[] = [
   },
   {
     title: 'Thriller 25',
+    cover: '/albums/thriller-25.svg',
     year: '2008',
     category: 'singles',
     label: 'Epic · Edición aniversario',
@@ -345,6 +358,7 @@ const albums: Album[] = [
   },
   {
     title: 'Number Ones',
+    cover: '/albums/number-ones.svg',
     year: '2003',
     category: 'hits',
     label: 'Epic / MJJ · Grandes éxitos',
@@ -370,6 +384,7 @@ const albums: Album[] = [
   },
   {
     title: 'The Essential',
+    cover: '/albums/the-essential.svg',
     year: '2005',
     category: 'hits',
     label: 'Epic / Legacy · Doble recopilatorio',
@@ -399,6 +414,7 @@ const albums: Album[] = [
   },
   {
     title: 'King of Pop',
+    cover: '/albums/king-of-pop.svg',
     year: '2008',
     category: 'hits',
     label: 'Epic · Recopilatorio votado por fans',
@@ -431,23 +447,19 @@ const tabs: { id: Category; label: string; icon: typeof Disc3 }[] = [
 
 function AlbumCover({ album }: { album: Album }) {
   return (
-    <div className="relative flex aspect-square w-full flex-col justify-between overflow-hidden border-b border-border bg-gradient-to-br from-secondary via-background to-background p-5">
-      <div className="flex items-start justify-between">
-        <Disc3 className="h-6 w-6 text-primary" />
-        <span className="rounded-full border border-primary/40 px-2.5 py-1 text-xs font-semibold text-primary">
-          {album.year}
-        </span>
-      </div>
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.06]">
-        <span className="text-[7rem] font-bold leading-none text-foreground">
-          {album.title.charAt(0)}
-        </span>
-      </div>
-      <div>
-        <div className="mb-2 h-0.5 w-10 bg-primary" />
-        <h3 className="text-balance text-xl font-bold uppercase leading-tight tracking-tight text-foreground">
+    <div className="relative aspect-square w-full overflow-hidden border-b border-border bg-secondary">
+      <img
+        src={album.cover}
+        alt={`Portada de ${album.title}`}
+        className="h-full w-full object-cover"
+      />
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-background/90 via-background/30 to-transparent p-4">
+        <h3 className="text-balance text-lg font-bold uppercase leading-tight tracking-tight text-foreground">
           {album.title}
         </h3>
+        <span className="shrink-0 rounded-full border border-primary/40 bg-background/70 px-2.5 py-1 text-xs font-semibold text-primary backdrop-blur-sm">
+          {album.year}
+        </span>
       </div>
     </div>
   )
@@ -561,9 +573,14 @@ export function Discography() {
             onClick={(e) => e.stopPropagation()}
             className="flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl border border-primary/40 bg-card sm:rounded-2xl"
           >
-            <div className="flex items-start justify-between gap-4 border-b border-border p-6">
-              <div>
-                <div className="mb-2 flex items-center gap-3">
+            <div className="flex items-start gap-5 border-b border-border p-6">
+              <img
+                src={selected.cover}
+                alt={`Portada de ${selected.title}`}
+                className="hidden h-28 w-28 shrink-0 rounded-lg object-cover sm:block"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="mb-2 flex flex-wrap items-center gap-3">
                   <span className="rounded-full border border-primary/40 px-2.5 py-1 text-xs font-semibold text-primary">
                     {selected.year}
                   </span>

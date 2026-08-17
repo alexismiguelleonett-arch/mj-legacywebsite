@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Crown, Menu, X } from 'lucide-react'
+import { Music, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
@@ -20,10 +20,10 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-            <Crown className="h-5 w-5 text-primary-foreground" />
+            <Music className="h-5 w-5 text-primary-foreground" />
           </span>
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground">
-            MJ Archivo
+            Legacy
           </span>
         </a>
 
