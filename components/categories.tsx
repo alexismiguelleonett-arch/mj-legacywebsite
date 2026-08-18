@@ -6,7 +6,6 @@ import {
   Shirt,
   BookOpen,
   ArrowUpRight,
-  Rat,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -47,17 +46,10 @@ const categories: Category[] = [
     count: 'Cronología completa',
   },
   {
-    icon: Rat,
-    title: 'Mascotas & Neverland',
-    description:
-      'El mítico rancho Neverland y mucho más de sus mascotas.',
-    count: 'Archivo de estilo',
-  },
-  {
     icon: Shirt,
-    title: 'Moda',
+    title: 'Moda, Mascotas & Neverland',
     description:
-      'El guante icónico, la chaqueta militar, Entre otras más.',
+      'El guante icónico, la chaqueta militar, Bubbles y el mítico rancho Neverland.',
     count: 'Archivo de estilo',
   },
   {

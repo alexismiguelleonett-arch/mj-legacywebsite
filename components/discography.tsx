@@ -18,10 +18,7 @@ type Album = {
   category: Category
   label: string
   tracklist: string[]
-  themeColor?: string;          // Color temático
-  alternativeCovers?: string[];  // Galería de carátulas alternativas
   editions: Edition[]
-  
 }
 
 const albums: Album[] = [
@@ -31,7 +28,6 @@ const albums: Album[] = [
     year: '1972',
     category: 'studio',
     label: 'Motown · Debut en solitario',
-    themeColor: '#800080',
     tracklist: [
       'Ain\u2019t No Sunshine',
       'I Wanna Be Where You Are',
@@ -58,7 +54,6 @@ const albums: Album[] = [
     year: '1972',
     category: 'studio',
     label: 'Motown',
-    themeColor: '#556B2F', // Color verde oliva
     tracklist: [
       'Ben',
       'Greatest Show on Earth',
@@ -85,7 +80,6 @@ const albums: Album[] = [
     year: '1973',
     category: 'studio',
     label: 'Motown',
-    themeColor: '#197965', // Color verde esmeralda
     tracklist: [
       'With a Child\u2019s Heart',
       'Up Again',
@@ -106,7 +100,6 @@ const albums: Album[] = [
     year: '1975',
     category: 'studio',
     label: 'Motown',
-    themeColor: '#E56357', // Color rojo salmon 
     tracklist: [
       'We\u2019re Almost There',
       'Take Me Back',
@@ -127,7 +120,6 @@ const albums: Album[] = [
     year: '1979',
     category: 'studio',
     label: 'Epic · Prod. Quincy Jones',
-    themeColor: '#814327', // Color marrón cálido
     tracklist: [
       'Don\u2019t Stop \u2019Til You Get Enough',
       'Rock with You',
@@ -157,7 +149,6 @@ const albums: Album[] = [
     year: '1982',
     category: 'studio',
     label: 'Epic · Álbum más vendido de la historia',
-    themeColor: '#4682B4', // Color azul acero
     tracklist: [
       'Wanna Be Startin\u2019 Somethin\u2019',
       'Baby Be Mine',
@@ -195,7 +186,6 @@ const albums: Album[] = [
     year: '1987',
     category: 'studio',
     label: 'Epic · Cinco #1 en Billboard',
-    themeColor: '#DC2626', // Color rojo intenso
     tracklist: [
       'Bad',
       'The Way You Make Me Feel',
@@ -232,7 +222,6 @@ const albums: Album[] = [
     year: '1991',
     category: 'studio',
     label: 'Epic · Prod. Teddy Riley',
-    themeColor: '#FFD700', // Color dorado
     tracklist: [
       'Jam',
       'Why You Wanna Trip on Me',
@@ -257,7 +246,6 @@ const albums: Album[] = [
     year: '1995',
     category: 'studio',
     label: 'Epic · Book I (disco de material nuevo)',
-    themeColor: '#8B0000', // Color rojo oscuro
     tracklist: [
       'Scream (con Janet Jackson)',
       'They Don\u2019t Care About Us',
@@ -290,12 +278,37 @@ const albums: Album[] = [
     ],
   },
   {
-    title: 'Blood on the Dance Floor',
-    cover: '/Blood of the Dance Floor.png',
-    year: '1997',
+    title: 'Invincible',
+    cover: '/invincible.jpg',
+    year: '2001',
     category: 'studio',
+    label: 'Epic · Último álbum de estudio',
+    tracklist: [
+      'Unbreakable',
+      'Heartbreaker',
+      'Invincible',
+      'Break of Dawn',
+      'Heaven Can Wait',
+      'You Rock My World',
+      'Butterflies',
+      'Speechless',
+      '2000 Watts',
+      'You Are My Life',
+      'Privacy',
+      'Don\u2019t Walk Away',
+      'Cry',
+      'The Lost Children',
+      'Whatever Happens (con Carlos Santana)',
+      'Threatened',
+    ],
+    editions: [],
+  },
+  {
+    title: 'Blood on the Dance Floor',
+    cover: '/albums/blood-on-the-dance-floor.svg',
+    year: '1997',
+    category: 'singles',
     label: 'Epic · HIStory in the Mix',
-    themeColor: '#680000', // Color rojo sangre
     tracklist: [
       'Blood on the Dance Floor',
       'Morphine',
@@ -320,98 +333,11 @@ const albums: Album[] = [
     ],
   },
   {
-    title: 'Invincible',
-    cover: '/invincible.jpg',
-    year: '2001',
-    category: 'studio',
-    label: 'Epic · Último álbum de estudio',
-    themeColor: '#808080', // Color gris/plata
-  alternativeCovers: [
-    '/invincible.jpg',
-    '/images/invincible-blue.jpg',
-    '/images/invincible-red.jpg',
-    '/images/invincible-green.jpg',
-    '/images/invincible-yellow.jpg'
-  ],
-    tracklist: [
-      'Unbreakable',
-      'Heartbreaker',
-      'Invincible',
-      'Break of Dawn',
-      'Heaven Can Wait',
-      'You Rock My World',
-      'Butterflies',
-      'Speechless',
-      '2000 Watts',
-      'You Are My Life',
-      'Privacy',
-      'Don\u2019t Walk Away',
-      'Cry',
-      'The Lost Children',
-      'Whatever Happens (con Carlos Santana)',
-      'Threatened',
-    ],
-    editions: [],
-  },
-  {
-    title: 'Michael',
-    cover: '/images/michael.jpg',
-    year: '2010',
-    category: 'studio',
-    label: 'Epic / MJJ Productions · Primer álbum póstumo',
-    themeColor: '#193070', 
-    tracklist: [
-      'Hold My Hand (con Akon)',
-      'Hollywood Tonight',
-      'Keep Your Head Up',
-      '(I Like) The Way You Love Me',
-      'Monster (con 50 Cent)',
-      'Best of Joy',
-      'Breaking News',
-      '(I Can\u2019t Make It) Another Day (con Lenny Kravitz)',
-      'Behind the Mask',
-      'Much Too Soon',
-    ],
-    editions: [
-      {
-        name: 'Deluxe Edition',
-        type: 'Bonus',
-        tracks: ['DVD con documental del making-of', 'Caja de lujo con libro de fotos'],
-      },
-    ],
-  },
-  {
-    title: 'Xscape',
-    cover: '/images/xscape.jpg',
-    year: '2014',
-    category: 'studio',
-    label: 'Epic / MJJ Productions · Segundo álbum póstumo',
-    themeColor: '#191970', // Color azul medianoche
-    tracklist: [
-      'Love Never Felt So Good',
-      'Chicago',
-      'Loving You',
-      'A Place with No Name',
-      'Slave to the Rhythm',
-      'Do You Know Where Your Children Are',
-      'Blue Gangsta',
-      'Xscape',
-    ],
-    editions: [
-      {
-        name: 'Deluxe Edition',
-        type: 'Bonus',
-        tracks: ['Versiones originales (demo) de cada tema', 'Documental de la producción'],
-      },
-    ],
-  },
-  {
     title: 'Thriller 25',
     cover: '/albums/thriller-25.svg',
     year: '2008',
     category: 'singles',
     label: 'Epic · Edición aniversario',
-    themeColor: '#808080',
     tracklist: [
       'Álbum original remasterizado (9 temas)',
       'The Girl Is Mine 2008 (con will.i.am)',
@@ -432,17 +358,10 @@ const albums: Album[] = [
   },
   {
     title: 'Number Ones',
-    cover: '/images/number-ones-1.png',
+    cover: '/albums/number-ones.svg',
     year: '2003',
     category: 'hits',
     label: 'Epic / MJJ · Grandes éxitos',
-    themeColor: '#FFFFFF',
-    alternativeCovers: [
-    '/images/number-ones-1.png',
-    '/images/number-ones-2.png',
-    '/images/number-ones-3.png',
-    '/images/number-ones-4.png'
-  ],
     tracklist: [
       'Don\u2019t Stop \u2019Til You Get Enough',
       'Rock with You',
@@ -465,10 +384,9 @@ const albums: Album[] = [
   },
   {
     title: 'The Essential',
-    cover: '/images/The Essential Michael Jackson.png',
+    cover: '/albums/the-essential.svg',
     year: '2005',
     category: 'hits',
-    themeColor: '#5c5c5c',
     label: 'Epic / Legacy · Doble recopilatorio',
     tracklist: [
       'Disco 1: era Motown y Off the Wall',
@@ -499,7 +417,6 @@ const albums: Album[] = [
     cover: '/albums/king-of-pop.svg',
     year: '2008',
     category: 'hits',
-    themeColor: '#474747',
     label: 'Epic · Recopilatorio votado por fans',
     tracklist: [
       'Recopilación con listas distintas por país',
@@ -551,14 +468,7 @@ function AlbumCover({ album }: { album: Album }) {
 export function Discography() {
   const [active, setActive] = useState<Category>('studio')
   const [selected, setSelected] = useState<Album | null>(null)
-  const [currentCover, setCurrentCover] = useState<string>('')
 
-  // Sincroniza la portada actual con la del álbum seleccionado al abrir el modal
-  useEffect(() => {
-    if (selected) {
-      setCurrentCover(selected.cover)
-    }
-  }, [selected])
   useEffect(() => {
     if (!selected) return
     function onKey(e: KeyboardEvent) {
@@ -589,8 +499,8 @@ export function Discography() {
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
             Explora la obra completa del Rey del Pop: desde sus inicios en Motown
-            hasta sus lanzamientos póstumos. Filtra por categoría y abre cada portada
-            para ver el tracklist y sus ediciones especiales.
+            hasta Invincible. Filtra por categoría y abre cada portada para ver el
+            tracklist y sus ediciones especiales.
           </p>
         </div>
 
@@ -603,7 +513,6 @@ export function Discography() {
           {tabs.map((tab) => {
             const Icon = tab.icon
             const isActive = active === tab.id
-
             return (
               <button
                 key={tab.id}
@@ -629,11 +538,7 @@ export function Discography() {
           {visible.map((album) => (
             <article
               key={album.title}
-              className="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:scale-[1.02]"
-              style={{
-                borderColor: album.themeColor || 'hsl(var(--primary) / 0.4)',
-                boxShadow: album.themeColor ? `0 0 20px ${album.themeColor}40` : undefined,
-              }}
+              className="group flex flex-col overflow-hidden rounded-xl border border-primary/40 bg-card transition-colors hover:border-primary"
             >
               <AlbumCover album={album} />
               <div className="flex flex-1 flex-col p-5">
@@ -641,17 +546,13 @@ export function Discography() {
                   {album.label}
                 </p>
                 <div className="mt-4 flex flex-1 items-end">
-<button
-  onClick={() => setSelected(album)}
-  className="inline-flex w-full items-center justify-center gap-2 rounded-md border bg-secondary/80 px-4 py-2.5 text-sm font-semibold transition-all hover:bg-secondary"
-  style={{
-    borderColor: album.themeColor || 'hsl(var(--primary))',
-    color: album.themeColor || 'hsl(var(--primary))'
-  }}
->
-  <ListMusic className="h-4 w-4" />
-  View Tracklist / Editions
-</button>
+                  <button
+                    onClick={() => setSelected(album)}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-secondary px-4 py-2.5 text-sm font-semibold text-foreground transition-colors group-hover:border-primary/50 hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <ListMusic className="h-4 w-4" />
+                    View Tracklist / Editions
+                  </button>
                 </div>
               </div>
             </article>
@@ -659,6 +560,7 @@ export function Discography() {
         </div>
       </div>
 
+      {/* Modal */}
       {selected && (
         <div
           className="fixed inset-0 z-[60] flex items-end justify-center bg-background/80 p-0 backdrop-blur-sm sm:items-center sm:p-6"
@@ -669,39 +571,14 @@ export function Discography() {
             aria-modal="true"
             aria-labelledby="album-modal-title"
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl border bg-card sm:rounded-2xl transition-all duration-300"
-            style={{
-              borderColor: selected?.themeColor || 'rgba(255, 255, 255, 0.1)',
-              boxShadow: selected?.themeColor ? `0 0 30px ${selected.themeColor}55` : 'none',
-            }}
+            className="flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-2xl border border-primary/40 bg-card sm:rounded-2xl"
           >
             <div className="flex items-start gap-5 border-b border-border p-6">
-              <div className="hidden shrink-0 flex-col items-center gap-2 sm:flex">
-                <img
-                  src={currentCover || selected.cover}
-                  alt={`Portada de ${selected.title}`}
-                  className="h-28 w-28 rounded-lg object-cover shadow-md transition-all duration-300"
-                />
-
-                {selected.alternativeCovers && selected.alternativeCovers.length > 0 && (
-                  <div className="mt-1 flex max-w-[112px] flex-wrap justify-center gap-1.5">
-                    {selected.alternativeCovers.map((cov, idx) => (
-                      <button
-                        key={cov + idx}
-                        onClick={() => setCurrentCover(cov)}
-                        className={`h-5 w-5 overflow-hidden rounded-full border transition-all ${
-                          (currentCover || selected.cover) === cov
-                            ? 'scale-110 border-primary ring-2 ring-primary/50'
-                            : 'border-border opacity-50 hover:opacity-100'
-                        }`}
-                      >
-                        <img src={cov} alt="Carátula" className="h-full w-full object-cover" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
+              <img
+                src={selected.cover}
+                alt={`Portada de ${selected.title}`}
+                className="hidden h-28 w-28 shrink-0 rounded-lg object-cover sm:block"
+              />
               <div className="min-w-0 flex-1">
                 <div className="mb-2 flex flex-wrap items-center gap-3">
                   <span className="rounded-full border border-primary/40 px-2.5 py-1 text-xs font-semibold text-primary">
@@ -718,7 +595,6 @@ export function Discography() {
                   {selected.title}
                 </h3>
               </div>
-
               <button
                 onClick={() => setSelected(null)}
                 aria-label="Cerrar"
@@ -730,70 +606,64 @@ export function Discography() {
 
             <div className="overflow-y-auto p-6">
               <div className="flex items-center gap-2">
-                <ListMusic
-                  className="h-4 w-4"
-                  style={{ color: selected.themeColor || 'hsl(var(--primary))' }}
-                />
+                <ListMusic className="h-4 w-4 text-primary" />
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">
                   Tracklist
                 </h4>
               </div>
-
               <ol className="mt-4 grid gap-1.5 sm:grid-cols-2">
                 {selected.tracklist.map((track, i) => (
                   <li
                     key={track + i}
                     className="flex items-baseline gap-3 rounded-md px-2 py-1.5 text-sm text-foreground/90 hover:bg-secondary"
                   >
-                    <span
-                      className="w-5 shrink-0 text-right text-xs font-semibold"
-                      style={{ color: selected.themeColor || 'hsl(var(--primary))' }}
-                    >
+                    <span className="w-5 shrink-0 text-right text-xs font-semibold text-primary">
                       {i + 1}
                     </span>
                     <span className="leading-snug">{track}</span>
                   </li>
                 ))}
               </ol>
-            </div>
 
-            {selected.editions.length > 0 && (
-              <div className="px-6 pb-6">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary" />
-                  <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                    Ediciones especiales
-                  </h4>
-                </div>
-
-                <div className="mt-4 space-y-4">
-                  {selected.editions.map((ed) => (
-                    <div
-                      key={ed.name}
-                      className="rounded-lg border border-border bg-secondary/50 p-4"
-                    >
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                          {ed.type}
-                        </span>
-                        <p className="text-sm font-semibold text-foreground">{ed.name}</p>
+              {selected.editions.length > 0 && (
+                <div className="mt-8">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" />
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">
+                      Ediciones especiales
+                    </h4>
+                  </div>
+                  <div className="mt-4 space-y-4">
+                    {selected.editions.map((ed) => (
+                      <div
+                        key={ed.name}
+                        className="rounded-lg border border-border bg-secondary/50 p-4"
+                      >
+                        <div className="flex flex-wrap items-center gap-3">
+                          <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+                            {ed.type}
+                          </span>
+                          <p className="text-sm font-semibold text-foreground">
+                            {ed.name}
+                          </p>
+                        </div>
+                        <ul className="mt-3 space-y-1.5">
+                          {ed.tracks.map((track) => (
+                            <li
+                              key={track}
+                              className="flex items-baseline gap-2 text-sm text-muted-foreground"
+                            >
+                              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                              {track}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="mt-3 space-y-1.5">
-                        {ed.tracks.map((track) => (
-                          <li
-                            key={track}
-                            className="flex items-baseline gap-2 text-sm text-muted-foreground"
-                          >
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
-                            {track}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       )}
